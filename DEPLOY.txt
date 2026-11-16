@@ -1,0 +1,15 @@
+PUT THE WEBSITE ONLINE (Render, free)
+
+1. Create a free account at github.com and click New repository (name: ieee-formatter).
+2. On the repository page click "uploading an existing file", drag in ALL files and the
+   templates folder from this project, then click Commit changes.
+3. Create a free account at render.com (sign in with GitHub).
+4. Click New + > Web Service, choose your ieee-formatter repository.
+5. Settings:
+     Build Command:  pip install -r requirements.txt
+     Start Command:  gunicorn app:app --bind 0.0.0.0:$PORT --timeout 120
+     Instance type:  Free
+6. Click Create Web Service. After 2-4 minutes you get a link like
+   https://ieee-formatter.onrender.com  - share it with anyone.
+
+Note: the free plan sleeps after 15 minutes of no use; the first visit then takes ~30 seconds.
